@@ -23,6 +23,10 @@ select {
     background-image: url(assets/images/spacious-hotel-room-with-rug.jpg);
 }
 
+.page__header{
+    background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)), url(assets/images/office-buildings-with-modern-architecture.jpg);
+}
+
 .price__card__bg.not__business{
     background-image: linear-gradient(rgb(220, 220, 220, 0.75), rgb(220, 220, 220, 0.75)), url(assets/images/office-buildings-with-modern-architecture.jpg);
 }
@@ -33,3 +37,34 @@ select {
     background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)), url(assets/images/3d-rendering-modern-dining-room-living-room-with-luxury-decor.jpg);
 }
 
+.pagination__button > .selected{
+    color: rgb(142, 250, 142); 
+    font-weight: 800;
+    transform: scale(1.05);
+}
+
+.pagination__button > .next, .pagination__button > .previous{
+    background: #fff;
+    border-radius: 5px;
+    height: 30px;
+    width: fit-content;
+    padding: 0 15px;
+    color: gray; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination__button > .next:hover, .pagination__button > .previous:hover{
+    transform: scale(1.05);
+}
+
+.pagination__button > .disabled{
+    background: red;
+    color: white;
+}
+
+.pagination__button > .disabled > a {
+    cursor: not-allowed !important;
+
+}

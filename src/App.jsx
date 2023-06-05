@@ -7,6 +7,8 @@ import Property from "./pages/Property";
 import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </div>

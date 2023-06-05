@@ -1,8 +1,11 @@
 import React from 'react'
+import PageHeader from '../components/PageHeader'
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
+    <section className="h-auto">
+      <PageHeader title="Contact Us"/>
+    </section>
   )
 }
 

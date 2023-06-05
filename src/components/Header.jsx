@@ -42,15 +42,15 @@ const Header = () => {
             </div>
             <div className="flex items-center justify-center text-sm h-10">
               <div className="space-x-3 flex mr-2">
-                <a href="" className="flex items-center space-x-1">
+                <Link to="/login" className="flex items-center space-x-1">
                   <BiLockAlt />
                   <span>Login</span>
-                </a>
+                </Link>
                 <span>|</span>
-                <a href="" className="flex items-center space-x-1">
+                <Link to="/register" className="flex items-center space-x-1">
                   <BiPen />
                   <span>Register</span>
-                </a>
+                </Link>
               </div>
               <div className="flex h-full">
                 <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">

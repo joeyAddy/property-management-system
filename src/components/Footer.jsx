@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const date = new Date();
   return (
-    <footer className="bg-gray-900  mt-5">
+    <footer className="bg-gray-900 mt-auto w-full mt-5">
       <div className="grid lg:grid-cols-4 py-20 md:px-36">
         <div className="col-span-1">
           <p className="capitalize text-2xl text-white">

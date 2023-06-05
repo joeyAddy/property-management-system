@@ -33,12 +33,12 @@ const Layout = () => {
   };
 
   return (
-    <main className="relative">
+    <main className="relative flex flex-col min-h-screen">
       <div ref={refScrollUp}>
         <Header />
       </div>
       <GoTop showGoTop={showGoTop} scrollUp={handleScrollUp} />
-      <div className="min-h-full w-full bg-white">
+      <div className=" w-full bg-white">
         <Outlet />
       </div>
       <Footer />

@@ -19,7 +19,7 @@ const ListingCard = ({
           </button>
         </a>
         <div class="p-6 flex flex-col items-start">
-          <h5 class="mb-2 text-lg tracking-wider font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+          <h5 class="mb-2 text-xl tracking-wider font-bold leading-tight text-neutral-800 dark:text-neutral-50">
             {title}
           </h5>
           <div className="space-x-2 flex items-center text-sm text-gray-400 my-3">
