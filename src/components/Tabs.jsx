@@ -15,7 +15,7 @@ const Tabs = () => {
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
+                  "text-lg font-medium uppercase px-5 py-3.5 mb-2 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
                   (openTab === 1
                     ? "text-blue-600 bg-white"
                     : "bg-blue-600 text-white")
@@ -34,7 +34,7 @@ const Tabs = () => {
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
+                  "text-lg font-medium uppercase px-5 py-3.5 mb-2 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
                   (openTab === 2
                     ? "text-blue-600 bg-white"
                     : "bg-blue-600 text-white")
@@ -53,7 +53,7 @@ const Tabs = () => {
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
+                  "text-lg font-medium uppercase px-5 py-3.5 mb-2 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
                   (openTab === 3
                     ? "text-blue-600 bg-white"
                     : "bg-blue-600 text-white")
@@ -72,7 +72,7 @@ const Tabs = () => {
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
+                  "text-lg font-medium uppercase px-5 py-3.5 mb-2 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
                   (openTab === 4
                     ? "text-blue-600 bg-white"
                     : "bg-blue-600 text-white")

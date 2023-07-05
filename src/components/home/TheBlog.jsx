@@ -13,8 +13,8 @@ const TheBlog = () => {
       </h4>
       <div className="grid lg:grid-cols-3 gap-8 mt-16">
         <BlogCard image={IMG1} title="Visual Design Concept" />
-        <BlogCard image={IMG2} title="Real Estate Feswtival - 2018"/>
-        <BlogCard image={IMG3} title="Latest Architectural Design"/>
+        <BlogCard image={IMG2} title="Real Estate Feswtival - 2018" />
+        <BlogCard image={IMG3} title="Latest Architectural Design" />
       </div>
     </section>
   );

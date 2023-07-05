@@ -7,7 +7,7 @@ const Listing = () => {
   return (
     <section className="h-auto">
       <PageHeader title="listing" />
-      <div className="grid lg:grid-cols-3 my-16 gap-8 md:mx-36">
+      <div className="grid lg:grid-cols-3 my-16 gap-8 mx-10 md:mx-36">
         <div className="col-span-2">
           <div className="flex items-center space-x-5 mb-5">
             <p className="font-base text-gray-400">Sort by:</p>

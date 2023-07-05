@@ -6,7 +6,7 @@ const Gallery = () => {
   return (
     <section className="h-auto ">
       <PageHeader title="gallery" />
-      <div className="mt-16 md:mx-36">
+      <div className="mt-16 mx-10 md:mx-36">
         <Tabs />
       </div>
     </section>

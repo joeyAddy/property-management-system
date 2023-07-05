@@ -4,7 +4,7 @@ const BlogCard = ({ image, title }) => {
   return (
     <div className="h-auto col-span-1 space-y-3 shadow-md hover:shadow-2xl hover:-translate-y-4 transition-transform duration-500">
       <div className="text-center">
-        <img className="object-contain" src={image} alt="" />
+        <img className="object-contain h-full w-full" src={image} alt="" loading="lazy" />
         <span className="cursor-pointer relative -top-4  rounded-md px-4 py-3 bg-blue-600 text-white font-medium text-lg uppercase">
           12 January, 2023
         </span>
