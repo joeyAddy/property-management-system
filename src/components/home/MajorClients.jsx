@@ -12,22 +12,42 @@ const MajorClients = () => {
         Our Major Clients
       </h2>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
-        <img className="object-contain  h-32" src={ITB} alt="" />
+        <img className="object-contain  h-32" src={ITB} alt="" loading="lazy" />
       </div>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
-        <img className="object-contain  h-32" src={elan} alt="" />
+        <img
+          className="object-contain  h-32"
+          src={elan}
+          alt=""
+          loading="lazy"
+        />
       </div>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
-        <img className="object-contain  h-32" src={montesora} alt="" />
+        <img
+          className="object-contain  h-32"
+          src={montesora}
+          alt=""
+          loading="lazy"
+        />
       </div>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
-        <img className="object-contain  h-32" src={CD} alt="" />
+        <img className="object-contain  h-32" src={CD} alt="" loading="lazy" />
       </div>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
-        <img className="object-contain  h-32" src={formwork} alt="" />
+        <img
+          className="object-contain  h-32"
+          src={formwork}
+          alt=""
+          loading="lazy"
+        />
       </div>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
-        <img className="object-contain  h-32" src={exceltech} alt="" />
+        <img
+          className="object-contain  h-32"
+          src={exceltech}
+          alt=""
+          loading="lazy"
+        />
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AgentCard = ({ name, image }) => {
   return (
@@ -15,14 +16,15 @@ const AgentCard = ({ name, image }) => {
             class="rounded-t-lg w-full h-80 object-fill md:object-cover"
             src={image}
             alt=""
+            loading="lazy"
           />
-          <div className="flex items-center justify-center gap-4 absolute top-0 left-0 rounded-tl-lg rounded-tr-lg w-full h-80 bg-black opacity-0 hover:opacity-70 transition-opacity delay-200 ease-in-out">
-            <a
-              href="#"
+          <div className="flex items-center justify-around gap-2 px-16 absolute top-0 left-0 rounded-tl-lg rounded-tr-lg max-w-full w-full h-80 bg-black opacity-0 hover:opacity-70 transition-opacity duration-200 ease-in-out">
+            <Link
+              to="#"
               className="border-2 border-white rounded p-3.5 text-white hover:bg-blue-400 text-lg"
             >
               <FaLinkedinIn />
-            </a>
+            </Link>
             <a
               href="#"
               className="border-2 border-white rounded p-3.5 text-white hover:bg-blue-400 text-lg"
