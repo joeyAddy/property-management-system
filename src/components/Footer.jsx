@@ -14,10 +14,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const date = new Date();
   return (
-    <footer className="bg-gray-900 mt-auto w-full mt-5">
-      <div className="grid lg:grid-cols-4 py-20 md:px-36">
+    <footer className="bg-gray-900 w-full mt-5">
+      <div className="grid lg:grid-cols-4 py-6 md:py-20 mx-6 md:px-36">
         <div className="col-span-1">
-          <p className="capitalize text-2xl text-white">
+          <p className="capitalize text-2xl text-white mt-4">
             <span className="font-bold mr-2">About</span>Us
           </p>
           <div className="h-auto space-y-4 mt-3 flex flex-col">
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-span-1">
-          <p className="capitalize text-2xl text-white">
+          <p className="capitalize text-2xl text-white mt-4">
             <span className="font-bold mr-2">Useful</span>links
           </p>
           <div className="h-auto space-y-4 mt-3 flex flex-col">
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-span-1">
-          <p className="capitalize text-2xl text-white">
+          <p className="capitalize text-2xl text-white mt-4">
             <span className="font-bold mr-2">Contact</span>Info
           </p>
           <div className="h-auto space-y-4 mt-3 flex flex-col ">
@@ -110,7 +110,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-span-1">
-          <p className="capitalize text-2xl text-white">
+          <p className="capitalize text-2xl text-white mt-4">
             <span className="font-bold mr-2">Subscribe</span>on our News
           </p>
           <div className="mt-3 flex flex-col space-y-4">

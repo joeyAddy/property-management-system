@@ -1,11 +1,11 @@
 import SectionTitle from "./SectionTitle";
-import house1 from "../../assets/images/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg";
+import house1 from "../../assets/images/livingroom2.jpg";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { FaRegThumbsUp, FaThumbsUp } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
-    <section className="h-auto -mt-10 md:px-36 pb-10 bg-slate-50">
+    <section className="h-auto -mt-10 px-6 md:px-36 pb-10 bg-slate-50">
       <SectionTitle title="About Us" />
       <h4 className="text-lg text-gray-400 text-center -mt-9 mb-3">
         These are the hottest, sleekest Apartments in town!
@@ -30,9 +30,9 @@ const AboutUs = () => {
               accusamus magnam quae. Explicabo dolore officia, iure a ullam
               aliquam nemo excepturi, repellat. uod ut delectus ad tempora.
             </p>
-            <div className="grid lg:grid-cols-2 gap-16 pt-3">
+            <div className="grid lg:grid-cols-2 md:gap-16 gap-6 pt-3">
               <div className="col-span-1 h-auto space-y-3">
-                <div className="flex gap-8 items-center mb-3">
+                <div className="flex md:gap-8 flex-col md:flex-row items-center mb-3">
                   <AiOutlineSafetyCertificate className="text-5xl text-green-400" />
                   <p className="text-2xl font-medium">Certified Company</p>
                 </div>
@@ -42,7 +42,7 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="col-span-1 h-auto space-y-3">
-                <div className="flex gap-8 items-center mb-3">
+                <div className="flex md:gap-8 flex-col md:flex-row items-center mb-3">
                   <FaThumbsUp className="text-5xl text-green-400" />
                   <p className="text-2xl font-medium">Highly Experienced</p>
                 </div>

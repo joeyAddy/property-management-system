@@ -13,7 +13,7 @@ const Testimonials = () => {
     margin: "0 8px",
   };
   return (
-    <section className="h-auto mt-10 md:mx-36 ">
+    <section className="h-auto mt-10 mx-6 md:mx-36 ">
       <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
         <SectionTitle title="Testimonials" />
         <h4 className="text-lg text-gray-400 text-center -mt-9 mb-3">
@@ -49,7 +49,7 @@ const Testimonials = () => {
             );
           }}
         >
-          <div className="grid gap-6 text-center md:grid-cols-3 mb-20 mx-5">
+          <div className="grid gap-6 text-center md:grid-cols-3 mb-20 md:mx-5">
             <div>
               <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
                 <div className="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>

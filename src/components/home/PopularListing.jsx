@@ -7,7 +7,7 @@ import ListingCard from "./ListingCard";
 
 const PopularListing = () => {
   return (
-    <section className="h-auto pt-10 px-14 md:px-36 pb-10 relative bg-slate-50">
+    <section className="h-auto pt-10 px-6 md:px-36 pb-10 relative bg-slate-50">
       <SectionTitle title="Popular Listings" />
       <h4 className="text-lg text-gray-400 text-center -mt-9 mb-3">
         View popular listing

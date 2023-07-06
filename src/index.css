@@ -13,28 +13,28 @@
 }
 
 select {
-    background-image: linear-gradient(45deg, transparent 50%, #272727 50%), linear-gradient(135deg, #272727 50%, transparent 50%);
+    background-image: linear-gradient(45deg, transparent 50%, #434343 50%), linear-gradient(135deg, #434343 50%, transparent 50%);
     background-position: calc(100% - 20px) calc(15px + 5px), calc(100% - 15px) calc(15px + 5px), 100% 0;
     background-size: 5px 5px, 5px 5px;
     background-repeat: no-repeat;
 }
 
 .hero{
-    background-image: url(assets/images/spacious-hotel-room-with-rug.jpg);
+    background-image: url(assets/images/bedroom3.jpg);
 }
 
 .page__header{
-    background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)), url(assets/images/office-buildings-with-modern-architecture.jpg);
+    background-image: linear-gradient(rgb(0, 0, 0, 0.65), rgb(0, 0, 0, 0.65)), url(assets/images/exterior1.jpg);
 }
 
 .price__card__bg.not__business{
-    background-image: linear-gradient(rgb(220, 220, 220, 0.75), rgb(220, 220, 220, 0.75)), url(assets/images/office-buildings-with-modern-architecture.jpg);
+    background-image: linear-gradient(rgb(220, 220, 220, 0.65), rgb(220, 220, 220, 0.65)), url(assets/images/exterior2.jpg);
 }
 
 
 
 .achievements{
-    background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)), url(assets/images/3d-rendering-modern-dining-room-living-room-with-luxury-decor.jpg);
+    background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)), url(assets/images/livingroom4.jpg);
 }
 
 .pagination__button > .selected{

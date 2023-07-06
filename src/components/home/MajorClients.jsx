@@ -7,7 +7,10 @@ import CD from "../../assets/images/c and d.png";
 
 const MajorClients = () => {
   return (
-    <section className="h-auto -mt-10 md:px-36 py-20 bg-slate-50 grid lg:grid-cols-6 items-center justify-center gap-8">
+    <section className="h-auto md:-mt-10 px-6 md:px-36 py-10 md:py-20 bg-slate-50 grid lg:grid-cols-6 items-center justify-center gap-8">
+      <h2 className="text-2xl md:text-4xl text-center font-bold">
+        Our Major Clients
+      </h2>
       <div className="col-span-1 px-3 space-y-3 shadow-md flex items-center justify-center bg-white">
         <img className="object-contain  h-32" src={ITB} alt="" />
       </div>

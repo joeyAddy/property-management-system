@@ -3,8 +3,6 @@ import SectionTitle from "./SectionTitle";
 import { Carousel } from "react-responsive-carousel";
 import ListingCard from "./ListingCard";
 import { Listings } from "../../constants/Listings";
-import house3 from "../../assets/images/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg";
-import house4 from "../../assets/images/office-buildings-with-modern-architecture.jpg";
 
 const LatestListings = () => {
   const indicatorStyles = {
@@ -17,12 +15,12 @@ const LatestListings = () => {
     margin: "0 8px",
   };
   return (
-    <section className="h-auto mt-10 md:px-36 pb-10">
+    <section className="h-auto mt-10 px-6 md:px-36 pb-10">
       <SectionTitle title="Latest Listings" />
       <h4 className="text-lg text-gray-400 text-center -mt-9 mb-3">
         These are the hottest, sleekest Apartments in town!
       </h4>
-      <div className="mt-5">
+      <div className="mt-5 h-auto">
         <Carousel
           renderIndicator={(onClickHandler, isSelected, index, label) => {
             if (isSelected) {

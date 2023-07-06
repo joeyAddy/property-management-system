@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 const PricingPlans = () => {
   return (
-    <section className="h-auto mt-10 md:mx-36 pb-10">
+    <section className="h-auto mt-10 mx-6 md:mx-36 pb-10">
       <SectionTitle title="Pricing Plans" />
       <h4 className="text-lg text-gray-400 text-center -mt-9 mb-3">
         Checkout our plans to enjoy non stop optimum housing services

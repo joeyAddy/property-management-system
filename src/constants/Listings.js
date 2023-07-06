@@ -1,9 +1,9 @@
-import house1 from "../assets/images/road-city.jpg";
-import house2 from "../assets/images/house-isolated-field.jpg";
-import house3 from "../assets/images/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge.jpg";
-import house4 from "../assets/images/office-buildings-with-modern-architecture.jpg";
-import house5 from "../assets/images/bangkok-thailand-august-12-2016-beautiful-luxury-bedroom-int.jpg";
-import house6 from "../assets/images/spacious-hotel-room-with-rug.jpg";
+import house1 from "../assets/images/exterior1.jpg";
+import house2 from "../assets/images/exterior2.jpg";
+import house3 from "../assets/images/exterior3.jpg";
+import house4 from "../assets/images/exterior4.jpg";
+import house5 from "../assets/images/livingroom1.jpg";
+import house6 from "../assets/images/livingroom2.jpg";
 
 export const Listings = [
   {

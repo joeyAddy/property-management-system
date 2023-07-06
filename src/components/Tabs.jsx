@@ -7,12 +7,12 @@ const Tabs = () => {
   return (
     <>
       <div className="flex flex-col h-full">
-        <div className="w-1/2 mx-auto">
+        <div className="md:w-1/2 mx-6 md:mx-auto">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 flex-row"
             role="tablist"
           >
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="mb-2 md:-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
@@ -31,7 +31,7 @@ const Tabs = () => {
                 All
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="mb-2 md:-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
@@ -50,7 +50,7 @@ const Tabs = () => {
                 Living Room
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="mb-2 md:-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +
@@ -69,7 +69,7 @@ const Tabs = () => {
                 Bedroom
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="mb-2 md:-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "text-lg font-medium uppercase px-5 py-3.5 bg-opacity-75 hover:shadow-lg hover:bg-opacity-100 border-2 border-blue-600 rounded block leading-normal transition-all ease-in-out duration-300 delay-150 " +

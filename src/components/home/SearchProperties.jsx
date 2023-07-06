@@ -6,7 +6,7 @@ const SearchProperties = () => {
   return (
     <section className="h-auto mt-10 md:mx-36 pb-10">
       <SectionTitle title="Search Properties" />
-      <div className="w-full shadow-xl rounded-md p-16">
+      <div className="w-full md:shadow-xl rounded-md p-6 md:p-16">
         <div className="grid lg:grid-cols-4 gap-8 ">
           <div className="col-span-1 ">
             <label className="w-full">

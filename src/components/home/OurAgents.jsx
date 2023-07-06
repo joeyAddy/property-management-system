@@ -4,7 +4,7 @@ import { Agents } from "../../constants/Agents";
 
 const OurAgents = () => {
   return (
-    <section className="h-auto mt-10 md:mx-36 pb-10">
+    <section className="h-auto mt-10 mx-6 md:mx-36 pb-10">
       <SectionTitle title="Our Agents" />
       <h4 className="text-lg text-gray-400 text-center -mt-9 mb-3">
         View popular listing

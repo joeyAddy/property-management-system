@@ -5,7 +5,7 @@ const PriceCard = ({ title }) => {
   return (
     <div
       className={`${
-        title === "business" ? "scale-105" : "hover:scale-105"
+        title === "business" ? "md:scale-105" : "hover:scale-105"
       } col-span-1 space-y-3 shadow-md flex flex-col items-center h-fit `}
     >
       <div className="bg-blue-600 font-bold text-3xl w-full h-24 flex items-center ">

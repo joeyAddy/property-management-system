@@ -1,5 +1,3 @@
-import HeroImage from "../../assets/images/spacious-hotel-room-with-rug.jpg";
-
 const Hero = () => {
   return (
     <div
