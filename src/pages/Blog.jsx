@@ -1,7 +1,7 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
-import PostImg from "../assets/images/manager-business-attire.jpg";
-import PostImg2 from "../assets/images/spacious-hotel-room-with-rug.jpg";
+import PostImg from "../assets/images/exterior1.jpg";
+import PostImg2 from "../assets/images/bedroom1.jpg";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,

@@ -37,16 +37,40 @@ select {
     background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)), url(assets/images/livingroom4.jpg);
 }
 
-.pagination__button > .selected{
-    color: rgb(142, 250, 142); 
+.pagination__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.pagination__button > li{
+    color: white;
     font-weight: 800;
-    transform: scale(1.05);
+    background: none;
+    border-radius: 50%;
+    border: 1px solid white;
+    height: fit-content;
+    width: fit-content;
+    padding: 3px 10px;
+}
+
+.pagination__button > .selected{
+    color: rgb(96 165 250); 
+    font-weight: 800;
+    background: #fff;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    padding:  3px 10px;
+    
 }
 
 .pagination__button > .next, .pagination__button > .previous{
     background: #fff;
     border-radius: 5px;
     height: 30px;
+    font-weight: normal;
     width: fit-content;
     padding: 0 15px;
     color: gray; 
@@ -60,11 +84,15 @@ select {
 }
 
 .pagination__button > .disabled{
-    background: red;
+    background: gray;
     color: white;
 }
 
 .pagination__button > .disabled > a {
     cursor: not-allowed !important;
 
+}
+
+.carousel-status{
+    display: none;
 }

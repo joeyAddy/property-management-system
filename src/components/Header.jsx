@@ -22,7 +22,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <header className="h-fit fixed top-0 w-full left-0 z-[1030]">
+    <header className="h-fit sticky top-0 w-full z-[1030]">
       <div className="w-full">
         <section>
           <div className="bg-blue-600 h-auto alert alert-dismissible fade show  w-full text-white  md:flex justify-between items-center text-center md:text-left pl-3 pr-5 pt-6 md:pt-0 md:px-36 ">

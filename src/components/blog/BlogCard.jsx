@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-import PostImg from "../../assets/images/spacious-hotel-room-with-rug.jpg";
+import PostImg from "../../assets/images/bedroom3.jpg";
 import { FaChevronRight } from "react-icons/fa";
 
 const BlogCard = () => {
   return (
     <div className="shadow-lg">
-      <img className="h-[500px] w-full object-cover" src={PostImg} alt="Post" loading="lazy"/>
+      <img
+        className="h-[500px] w-full object-cover"
+        src={PostImg}
+        alt="Post"
+        loading="lazy"
+      />
       <div className="p-10">
         <div className="space-y-5">
           <div className="space-y-2">
