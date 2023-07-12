@@ -72,31 +72,45 @@ const Listing = () => {
             <div className="flex flex-col space-y-6 text-lg text-gray-400">
               <div className="flex space-x-3">
                 <input id="check-2" type="checkbox" name="check" />
-                <label htmlFor="check-2">Air Conditioning</label>
+                <label className="text-sm" htmlFor="check-2">
+                  Air Conditioning
+                </label>
               </div>
               <div className="flex space-x-3">
                 <input id="check-3" type="checkbox" name="check" />
-                <label htmlFor="check-3">Swimming Pool</label>{" "}
+                <label className="text-sm" htmlFor="check-3">
+                  Swimming Pool
+                </label>{" "}
               </div>
               <div className="flex space-x-3">
                 <input id="check-4" type="checkbox" name="check" />
-                <label htmlFor="check-4">Central Heating</label>
+                <label className="text-sm" htmlFor="check-4">
+                  Central Heating
+                </label>
               </div>
               <div className="flex space-x-3">
                 <input id="check-5" type="checkbox" name="check" />
-                <label htmlFor="check-5">Laundry Room</label>
+                <label className="text-sm" htmlFor="check-5">
+                  Laundry Room
+                </label>
               </div>
               <div className="flex space-x-3">
                 <input id="check-6" type="checkbox" name="check" />
-                <label htmlFor="check-6">Gym</label>
+                <label className="text-sm" htmlFor="check-6">
+                  Gym
+                </label>
               </div>
               <div className="flex space-x-3">
                 <input id="check-7" type="checkbox" name="check" />
-                <label htmlFor="check-7">Alarm</label>
+                <label className="text-sm" htmlFor="check-7">
+                  Alarm
+                </label>
               </div>
               <div className="flex space-x-3">
                 <input id="check-8" type="checkbox" name="check" />
-                <label htmlFor="check-8">Window Covering</label>
+                <label className="text-sm" htmlFor="check-8">
+                  Window Covering
+                </label>
               </div>
               <button className="bg-blue-400 rounded-md p-3 w-full text-white font-bold">
                 Search

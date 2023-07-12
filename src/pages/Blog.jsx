@@ -20,7 +20,7 @@ const Blog = () => {
           <BlogCard />
         </div>
         <div className="col-span-1 space-y-4">
-          <p className="uppercase text-2xl text-gray-600 font-bold">
+          <p className="uppercase text-xl text-gray-600 font-bold">
             Search Blog
           </p>
           <div className="flex w-full flex-wrap border border-solid border-neutral-300 bg-transparent rounded-md">
@@ -53,7 +53,7 @@ const Blog = () => {
               </svg>
             </button>
           </div>
-          <p className="uppercase text-2xl text-gray-600 font-bold pt-5">
+          <p className="uppercase text-xl text-gray-600 font-bold pt-5">
             Popular Posts
           </p>
           <div className="space-y-3">
@@ -94,7 +94,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <p className="uppercase text-2xl text-gray-600 font-bold pt-5">
+          <p className="uppercase text-xl text-gray-600 font-bold pt-5">
             Featured Properties
           </p>
           <div className="bg-gray-50 rounded-md">
@@ -103,18 +103,18 @@ const Blog = () => {
             </div>
             <div className="p-4 space-y-3">
               <div>
-                <p className="text-2xl text-gray-600">Eagle Apartments</p>
-                <p className="text-2xl text-gray-600 font-medium">$4,500</p>
+                <p className="text-xl text-gray-600">Eagle Apartments</p>
+                <p className="text-xl text-gray-600 font-medium">$4,500</p>
               </div>
               <div className="bg-blue-600 text-white flex flex-col p-6">
                 <table>
-                  <tr className="">
-                    <th className="text-start">Area</th>
-                    <th className="text-start">Rooms</th>
-                    <th className="text-start">Beds</th>
-                    <th className="text-start">Baths</th>
+                  <tr className="text-sm text-center">
+                    <th>Area</th>
+                    <th>Rooms</th>
+                    <th>Beds</th>
+                    <th>Baths</th>
                   </tr>
-                  <tr className="">
+                  <tr className="text-sm text-center">
                     <td>530 sq ft</td>
                     <td>2</td>
                     <td>4</td>
@@ -124,7 +124,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <p className="uppercase text-2xl text-gray-600 font-bold pt-5">
+          <p className="uppercase text-xl text-gray-600 font-bold pt-5">
             Social Media
           </p>
           <div className="flex items-center justify-start text-lg text-gray-900 space-x-3">

@@ -18,13 +18,13 @@ const AboutUs = () => {
             alt=""
           />
           <div className="flex flex-col justify-start space-y-4 p-6 bg-white">
-            <h5 className="mb-2 text-3xl font-medium text-neutral-800 dark:text-neutral-50">
+            <h5 className="mb-2 text-2xl font-medium text-neutral-800 dark:text-neutral-50">
               Who We Are
             </h5>
-            <h2 className="mb-2 text-4xl font-bold text-neutral-800 dark:text-neutral-50">
+            <h2 className="mb-2 text-3xl font-bold text-neutral-800 dark:text-neutral-50">
               Best and Award Winning Real Estate Business in USA 2019
             </h2>
-            <p className=" text-gray-600 text-lg dark:text-neutral-200">
+            <p className=" text-gray-600 text-md dark:text-neutral-200">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
               nostrum, doloremque quaerat sit tempora eius est reiciendis
               accusamus magnam quae. Explicabo dolore officia, iure a ullam
@@ -34,9 +34,9 @@ const AboutUs = () => {
               <div className="col-span-1 h-auto space-y-3">
                 <div className="flex md:gap-8 flex-col md:flex-row items-center mb-3">
                   <AiOutlineSafetyCertificate className="text-5xl text-green-400" />
-                  <p className="text-2xl font-medium">Certified Company</p>
+                  <p className="text-xl font-medium">Certified Company</p>
                 </div>
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-md">
                   We'll generate a sitemap for your site, submit it to search
                   engine is and track crawler access.
                 </p>
@@ -44,9 +44,9 @@ const AboutUs = () => {
               <div className="col-span-1 h-auto space-y-3">
                 <div className="flex md:gap-8 flex-col md:flex-row items-center mb-3">
                   <FaThumbsUp className="text-5xl text-green-400" />
-                  <p className="text-2xl font-medium">Highly Experienced</p>
+                  <p className="text-xl font-medium">Highly Experienced</p>
                 </div>
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-md">
                   We'll generate a sitemap for your site, submit it to search
                   engine is and track crawler access.
                 </p>

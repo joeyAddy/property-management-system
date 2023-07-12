@@ -18,36 +18,36 @@ const AgentCard = ({ name, image }) => {
             alt=""
             loading="lazy"
           />
-          <div className="flex items-center justify-around gap-2 px-16 absolute top-0 left-0 rounded-tl-lg rounded-tr-lg max-w-full w-full h-80 bg-black opacity-0 hover:opacity-70 transition-opacity duration-200 ease-in-out">
+          <div className="flex items-center justify-around gap-2 px-20 absolute top-0 left-0 rounded-tl-lg rounded-tr-lg max-w-full w-full h-80 bg-black opacity-0 hover:opacity-70 transition-opacity duration-200 ease-in-out">
             <Link
               to="#"
-              className="border-2 border-white rounded p-3.5 text-white hover:bg-blue-400 text-lg"
+              className="border-2 border-white rounded p-2.5 text-white hover:bg-blue-400 text-lg"
             >
               <FaLinkedinIn />
             </Link>
             <a
               href="#"
-              className="border-2 border-white rounded p-3.5 text-white hover:bg-blue-400 text-lg"
+              className="border-2 border-white rounded p-2.5 text-white hover:bg-blue-400 text-lg"
             >
               <FaFacebook />
             </a>
             <a
               href="#"
-              className="border-2 border-white rounded p-3.5 text-white hover:bg-blue-400 text-lg"
+              className="border-2 border-white rounded p-2.5 text-white hover:bg-blue-400 text-lg"
             >
               <FaInstagram />
             </a>
             <a
               href="#"
-              className="border-2 border-white rounded p-3.5 text-white hover:bg-blue-400 text-lg"
+              className="border-2 border-white rounded p-2.5 text-white hover:bg-blue-400 text-lg"
             >
               <FaTwitter />
             </a>
           </div>
         </div>
         <div class="p-6 text-center">
-          <p className="text-2xl font-bold text-gray-800 mb-1">{name}</p>
-          <p className="text-lg text-gray-400">Real Estate Agent</p>
+          <p className="text-xl font-bold text-gray-800 mb-1">{name}</p>
+          <p className="text-md text-gray-400">Real Estate Agent</p>
         </div>
       </div>
     </div>
