@@ -80,7 +80,7 @@ const Header = () => {
         className="relative flex w-full items-center justify-between bg-white py-4 text-neutral-600 shadow-lg hover:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
         data-te-navbar-ref
       >
-        <div className="flex w-full items-center justify-between ml-3 mr-5 md:px-32">
+        <div className="flex w-full items-center justify-between ml-3 mr-5 md:px-32 space-x-3 md:space-x-0">
           <div className="flex items-center">
             <button
               className="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
@@ -112,7 +112,7 @@ const Header = () => {
           </div>
 
           <div className="flex">
-            <h1 className="font-extrabold tracking-widest text-3xl text-blue-600 m-0">
+            <h1 className="font-extrabold tracking-widest text-xl lg:text-3xl text-blue-600 m-0">
               LOGO
             </h1>
           </div>
@@ -126,9 +126,9 @@ const Header = () => {
               className="mr-auto flex flex-col lg:flex-row uppercase font-semibold mx-auto"
               data-te-navbar-nav-ref
             >
-              <li className="mb-4 lg:mb-0 md:pr-4" data-te-nav-item-ref>
+              <li className="mb-4 lg:mb-0" data-te-nav-item-ref>
                 <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3  hover:text-blue-400 ${
+                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm  hover:text-blue-400 ${
                     urlPath === "" ? "bg-blue-600 rounded-md text-white" : ""
                   }`}
                   to="/"
@@ -139,9 +139,9 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-              <li className="mb-4 lg:mb-0 lg:pr-4" data-te-nav-item-ref>
+              <li className="mb-4 lg:mb-0" data-te-nav-item-ref>
                 <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3 hover:text-blue-400 hover:focus:text-white  ${
+                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
                     urlPath === "listing"
                       ? "bg-blue-600 rounded-md text-white"
                       : ""
@@ -154,9 +154,9 @@ const Header = () => {
                   Listing
                 </Link>
               </li>
-              <li className="mb-4 lg:mb-0 lg:pr-4" data-te-nav-item-ref>
+              <li className="mb-4 lg:mb-0" data-te-nav-item-ref>
                 <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3 hover:text-blue-400 hover:focus:text-white  ${
+                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
                     urlPath === "property"
                       ? "bg-blue-600 rounded-md text-white"
                       : ""
@@ -169,9 +169,9 @@ const Header = () => {
                   Property
                 </Link>
               </li>
-              <li className="mb-2 lg:mb-0 lg:pr-4" data-te-nav-item-ref>
+              <li className="mb-2 lg:mb-0" data-te-nav-item-ref>
                 <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3 hover:text-blue-400 hover:focus:text-white  ${
+                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
                     urlPath === "gallery"
                       ? "bg-blue-600 rounded-md text-white"
                       : ""
@@ -184,9 +184,9 @@ const Header = () => {
                   Gallery
                 </Link>
               </li>
-              <li className="mb-2 lg:mb-0 lg:pr-4" data-te-nav-item-ref>
+              <li className="mb-2 lg:mb-0" data-te-nav-item-ref>
                 <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3 hover:text-blue-400 hover:focus:text-white  ${
+                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
                     urlPath === "blog"
                       ? "bg-blue-600 rounded-md text-white"
                       : ""
@@ -199,9 +199,9 @@ const Header = () => {
                   Blog
                 </Link>
               </li>
-              <li className="mb-2 lg:mb-0 lg:pr-4" data-te-nav-item-ref>
+              <li className="mb-2 lg:mb-0" data-te-nav-item-ref>
                 <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3 hover:text-blue-400 hover:focus:text-white  ${
+                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
                     urlPath === "contact-us"
                       ? "bg-blue-600 rounded-md text-white"
                       : ""
@@ -217,7 +217,7 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="flex w-56 flex-wrap border border-solid border-neutral-300 bg-transparent rounded-md">
+          <div className="flex flex-1 lg:w-56 flex-wrap border border-solid border-neutral-300 bg-transparent rounded-md">
             <input
               type="search"
               className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-0 focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
@@ -227,7 +227,7 @@ const Header = () => {
             />
 
             <button
-              className="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight bg-white  transition duration-150 ease-in-out hover:bg-primary-700  focus:bg-primary-700 focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+              className="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight bg-white  transition duration-150 ease-in-out hover: text-smbg-primary-700  focus:bg-primary-700 focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
               type="button"
               id="button-addon1"
               data-te-ripple-init
