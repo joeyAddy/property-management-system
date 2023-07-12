@@ -59,7 +59,7 @@ const Testimonials = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 bg-white">
                   <h4 className="mb-4 text-2xl font-semibold text-gray-600">
                     Maria Smantha
                   </h4>
@@ -150,7 +150,7 @@ const Testimonials = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 bg-white">
                   <h4 className="mb-4 text-2xl font-semibold text-gray-600">
                     Maria Smantha
                   </h4>

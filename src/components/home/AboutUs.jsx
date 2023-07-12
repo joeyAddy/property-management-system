@@ -17,7 +17,7 @@ const AboutUs = () => {
             src={house1}
             alt=""
           />
-          <div className="flex flex-col justify-start space-y-4 p-6">
+          <div className="flex flex-col justify-start space-y-4 p-6 bg-white">
             <h5 className="mb-2 text-3xl font-medium text-neutral-800 dark:text-neutral-50">
               Who We Are
             </h5>
