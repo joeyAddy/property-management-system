@@ -15,7 +15,7 @@ const Blog = () => {
   return (
     <section className="h-auto">
       <PageHeader title="blog" />
-      <div className="grid lg:grid-cols-3 my-16 gap-16 mx-10 md:mx-36">
+      <div className="grid lg:grid-cols-3 my-16 gap-16 mx-6 md:mx-36">
         <div className="col-span-2">
           <BlogCard />
         </div>

@@ -2,17 +2,19 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 import { Listings } from "../constants/Listings";
 import Pagination from "../components/Pagination";
+import { useRef } from "react";
 
 const Listing = () => {
+  const listRef = useRef(null);
   return (
     <section className="h-auto">
       <PageHeader title="listing" />
-      <div className="grid lg:grid-cols-3 my-16 gap-8 mx-10 md:mx-36">
+      <div className="grid lg:grid-cols-3 my-16 lg:gap-8 mx-6 md:mx-36">
         <div className="col-span-2">
-          <div className="flex items-center space-x-5 mb-5">
-            <p className="font-base text-gray-400">Sort by:</p>
+          <div className="flex flex-wrap items-center justify-between lg:justify-start  lg:space-x-5 mb-5">
+            <p className="text-base text-gray-400 w-fit">Sort by:</p>
             <label className="">
-              <select className="bg-transparent p-3 rounded-md box-border appearance-none border border-gray-300 inline-block h-[48px] focus:outline-none w-full">
+              <select className="bg-transparent p-2 lg:p-3 rounded-md box-border appearance-none border border-gray-300 inline-block h-[48px] focus:outline-none w-full">
                 <option>Default Order</option>
                 <option>Price Low to High</option>
                 <option>Price High to Low</option>
@@ -20,9 +22,13 @@ const Listing = () => {
                 <option>Oldest Properties</option>
               </select>
             </label>
-            <p className="font-base text-gray-400">42 Homes found</p>
+            <p className="text-base text-gray-400 w-fit mt-3 lg:mt-0">
+              42 Homes found
+            </p>
           </div>
-          <Pagination itemsPerPage={4} items={Listings} />
+          <div ref={listRef}>
+            <Pagination itemsPerPage={4} items={Listings} listRef={listRef} />
+          </div>
         </div>
         <div className="col-span-1">
           <div className="flex items-center h-16">

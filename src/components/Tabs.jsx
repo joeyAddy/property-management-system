@@ -7,7 +7,7 @@ const Tabs = () => {
   return (
     <>
       <div className="flex flex-col h-full">
-        <div className="md:w-1/2 mx-6 md:mx-auto">
+        <div className="md:w-1/2 md:mx-auto ">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 flex-row"
             role="tablist"
@@ -91,7 +91,7 @@ const Tabs = () => {
           </ul>
         </div>
         <div className="flex flex-col min-w-0 break-words h-auto w-full mb-6 ">
-          <div className="px-4 py-5 flex-auto">
+          <div className="lg:px-4 py-5 flex-auto">
             <div className="tab-content tab-space">
               <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                 <div className="grid lg:grid-cols-3 gap-5 mt-5">

@@ -11,11 +11,14 @@ import {
 } from "react-icons/fa";
 import { BiLockAlt, BiPen } from "react-icons/bi";
 import { Link, useLocation } from "react-router-dom";
+import SideBar from "./SideBar";
 
 const Header = () => {
   const { pathname } = useLocation();
 
   const [urlPath, setUrlPath] = useState("");
+
+  const [openCanvas, setOpenCanvas] = useState(false);
 
   useEffect(() => {
     setUrlPath(pathname.replace("/", ""));
@@ -81,10 +84,18 @@ const Header = () => {
         data-te-navbar-ref
       >
         <div className="flex w-full items-center justify-between ml-3 mr-5 md:px-32 space-x-3 md:space-x-0">
+          <SideBar
+            urlPath={urlPath}
+            setOpenCanvas={setOpenCanvas}
+            openCanvas={openCanvas}
+          />
           <div className="flex items-center">
             <button
               className="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
               type="button"
+              onClick={() => {
+                setOpenCanvas(!openCanvas);
+              }}
               text-white
               data-te-collapse-init
               data-te-target="#navbarSupportedContentX"

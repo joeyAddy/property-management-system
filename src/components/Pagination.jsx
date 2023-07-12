@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import ListingCard from "./home/ListingCard";
 
-const Pagination = ({ itemsPerPage, items }) => {
+const Pagination = ({ itemsPerPage, items, listRef }) => {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
@@ -22,11 +22,12 @@ const Pagination = ({ itemsPerPage, items }) => {
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
     setItemOffset(newOffset);
+    listRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
-      <div className="grid lg:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-y-8 lg:gap-8">
         {items
           .slice(itemOffset, endOffset)
           .map(
