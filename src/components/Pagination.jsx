@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import ListingCard from "./home/ListingCard";
@@ -32,7 +33,7 @@ const Pagination = ({ itemsPerPage, items, listRef }) => {
           .slice(itemOffset, endOffset)
           .map(
             (
-              { title, price, description, address, listClass, image } = item,
+              { title, price, description, address, listClass, image } = items,
               index
             ) => (
               <div key={index}>
@@ -49,7 +50,7 @@ const Pagination = ({ itemsPerPage, items, listRef }) => {
           )}
       </div>
       <ReactPaginate
-        className="flex space-x-5 justify-center my-5 bg-blue-400 p-3 text-white pagination__button"
+        className="flex space-x-5 justify-center my-5 border-t border-solid p-3 text-white pagination__button"
         breakLabel="..."
         nextLabel="next >"
         onPageChange={handlePageClick}

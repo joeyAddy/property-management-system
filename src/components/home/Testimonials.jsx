@@ -1,17 +1,7 @@
-import React from "react";
 import SectionTitle from "./SectionTitle";
 import { Carousel } from "react-responsive-carousel";
 
 const Testimonials = () => {
-  const indicatorStyles = {
-    background: "#fff",
-    border: "2px solid blue",
-    borderRadius: "50%",
-    width: 15,
-    height: 15,
-    display: "inline-block",
-    margin: "0 8px",
-  };
   return (
     <section className="h-auto mt-10 mx-6 md:mx-36 ">
       <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">

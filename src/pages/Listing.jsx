@@ -1,4 +1,3 @@
-import React from "react";
 import PageHeader from "../components/PageHeader";
 import { Listings } from "../constants/Listings";
 import Pagination from "../components/Pagination";

@@ -9,6 +9,7 @@ import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="listing" element={<Listing />} />
           <Route path="property" element={<Property />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="login" element={<Login />} />

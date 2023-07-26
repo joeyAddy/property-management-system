@@ -1,4 +1,3 @@
-import React from "react";
 import PageHeader from "../components/PageHeader";
 import PostImg from "../assets/images/exterior1.jpg";
 import PostImg2 from "../assets/images/bedroom1.jpg";
@@ -46,9 +45,9 @@ const Blog = () => {
                 className="h-5 w-5"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </button>
@@ -86,7 +85,7 @@ const Blog = () => {
                   to=""
                   className="text-lg text-gray-600 text-medium hover:text-blue-600"
                 >
-                  Bedroom Colors You'll Never Regret
+                  Bedroom Colors You&apos;ll Never Regret
                 </Link>
                 <p className="text-base text-gray-400 text-normal">
                   November 9, 2018

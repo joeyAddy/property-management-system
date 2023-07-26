@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { FaCheckSquare } from "react-icons/fa";
 
 const PriceCard = ({ title }) => {

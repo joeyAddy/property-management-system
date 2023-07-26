@@ -1,7 +1,7 @@
 import SectionTitle from "./SectionTitle";
 import house1 from "../../assets/images/livingroom2.jpg";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { FaRegThumbsUp, FaThumbsUp } from "react-icons/fa";
+import { FaThumbsUp } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
@@ -37,8 +37,8 @@ const AboutUs = () => {
                   <p className="text-xl font-medium">Certified Company</p>
                 </div>
                 <p className="text-gray-600 text-md">
-                  We'll generate a sitemap for your site, submit it to search
-                  engine is and track crawler access.
+                  We&apos;ll generate a sitemap for your site, submit it to
+                  search engine is and track crawler access.
                 </p>
               </div>
               <div className="col-span-1 h-auto space-y-3">
@@ -47,8 +47,8 @@ const AboutUs = () => {
                   <p className="text-xl font-medium">Highly Experienced</p>
                 </div>
                 <p className="text-gray-600 text-md">
-                  We'll generate a sitemap for your site, submit it to search
-                  engine is and track crawler access.
+                  We&apos;ll generate a sitemap for your site, submit it to
+                  search engine is and track crawler access.
                 </p>
               </div>
             </div>

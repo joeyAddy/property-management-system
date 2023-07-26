@@ -13,6 +13,7 @@ export const Listings = [
     address: "Area 34, Mahuta, Kaduna",
     price: "$1,500",
     description: "4 bds . 4 ba . 2500 Sqft",
+    favorite: true,
   },
   {
     image: house2,
@@ -21,6 +22,7 @@ export const Listings = [
     address: "34, Akin close, Gbagada",
     price: "$15,500",
     description: "4 bds . 4 ba . 2500 Sqft",
+    favorite: false,
   },
   {
     image: house3,
@@ -29,6 +31,7 @@ export const Listings = [
     address: "Area 34, Mahuta, Kadunat",
     price: "$1,500",
     description: "4 bds . 4 ba . 2500 Sqft",
+    favorite: true,
   },
   {
     image: house4,
@@ -37,6 +40,7 @@ export const Listings = [
     address: "Area 34, Mahuta, Kadunat",
     price: "$1,500",
     description: "4 bds . 4 ba . 2500 Sqft",
+    favorite: false,
   },
   {
     image: house5,
@@ -45,6 +49,7 @@ export const Listings = [
     address: "Area 34, Mahuta, Kadunat",
     price: "$1,500",
     description: "4 bds . 4 ba . 2500 Sqft",
+    favorite: true,
   },
   {
     image: house6,
@@ -53,5 +58,6 @@ export const Listings = [
     address: "Area 34, Mahuta, Kadunat",
     price: "$1,500",
     description: "4 bds . 4 ba . 2500 Sqft",
+    favorite: true,
   },
 ];

@@ -1,4 +1,14 @@
 @tailwind base;
+@layer base {
+    html {
+        @apply text-neutral-800;
+    }
+
+    html.dark {
+        @apply text-neutral-50;
+        @apply bg-neutral-800;
+    }
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -45,35 +55,33 @@ select {
 }
 
 .pagination__button > li{
-    color: white;
-    font-weight: 800;
+    color: rgb(96 165 250);
     background: none;
-    border-radius: 50%;
-    border: 1px solid white;
+    border-radius: 5px;
+    border: 1px solid gray;
     height: fit-content;
     width: fit-content;
-    padding: 3px 10px;
+    padding: 5px 12px;
 }
 
 .pagination__button > .selected{
-    color: rgb(96 165 250); 
-    font-weight: 800;
-    background: #fff;
-    border-radius: 50%;
+    color: white; 
+    background: rgb(96 165 250);
+    border-radius: 5px;
+    border: none;
     height: fit-content;
     width: fit-content;
-    padding:  3px 10px;
-    
+    padding: 5px 12px;
 }
 
 .pagination__button > .next, .pagination__button > .previous{
-    background: #fff;
+    background: rgb(96 165 250);
     border-radius: 5px;
-    height: 30px;
+    border: none;
+    padding: 7px 12px;
     font-weight: normal;
     width: fit-content;
-    padding: 0 15px;
-    color: gray; 
+    color: white; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +92,7 @@ select {
 }
 
 .pagination__button > .disabled{
-    background: gray;
+    background: rgb(96 165 250);
     color: white;
 }
 

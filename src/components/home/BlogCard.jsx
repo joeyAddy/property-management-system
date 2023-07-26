@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FaRegCommentDots, FaRegHeart, FaUser } from "react-icons/fa";
 
 const BlogCard = ({ image, title }) => {

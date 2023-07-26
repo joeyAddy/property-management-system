@@ -1,8 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const SideBar = ({ setOpenCanvas, openCanvas, urlPath }) => {
   return (
     <div
@@ -14,7 +12,7 @@ const SideBar = ({ setOpenCanvas, openCanvas, urlPath }) => {
         onClick={() => {
           setOpenCanvas(false);
         }}
-        className="font-semibold self-start cursor-pointer rounded-md px-2 bg-white bg-red-600 text-white w-fit mb-6"
+        className="font-semibold self-start cursor-pointer rounded-md px-2 bg-red-600 text-white w-fit mb-6"
       >
         x
       </span>

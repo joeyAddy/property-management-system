@@ -1,7 +1,5 @@
-import React from "react";
+/* eslint-disable no-undef */
 import SectionTitle from "./SectionTitle";
-import { AiOutlineMail } from "react-icons/ai";
-import { CiLocationOn } from "react-icons/ci";
 import { Listings } from "../../constants/Listings";
 import ListingCard from "./ListingCard";
 

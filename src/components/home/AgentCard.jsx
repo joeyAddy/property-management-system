@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import {
   FaFacebook,
   FaInstagram,
@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 const AgentCard = ({ name, image }) => {
   return (
     <div className="col-span-1 h-auto hover:shadow-2xl transition-all delay-100 ease-in-out hover:-translate-y-2 hover:rounded-lg bg-white">
-      <div class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+      <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
         <div className="relative">
           <img
-            class="rounded-t-lg w-full h-80 object-fill md:object-cover"
+            className="rounded-t-lg w-full h-80 object-fill md:object-cover"
             src={image}
             alt=""
             loading="lazy"
@@ -45,7 +45,7 @@ const AgentCard = ({ name, image }) => {
             </a>
           </div>
         </div>
-        <div class="p-6 text-center">
+        <div className="p-6 text-center">
           <p className="text-xl font-bold text-gray-800 mb-1">{name}</p>
           <p className="text-md text-gray-400">Real Estate Agent</p>
         </div>

@@ -1,19 +1,10 @@
-import React from "react";
+/* eslint-disable no-undef */
 import SectionTitle from "./SectionTitle";
 import { Carousel } from "react-responsive-carousel";
 import ListingCard from "./ListingCard";
 import { Listings } from "../../constants/Listings";
 
 const LatestListings = () => {
-  const indicatorStyles = {
-    background: "#fff",
-    border: "2px solid blue",
-    borderRadius: "50%",
-    width: 15,
-    height: 15,
-    display: "inline-block",
-    margin: "0 8px",
-  };
   return (
     <section className="h-auto mt-10 px-6 md:px-36 pb-10">
       <SectionTitle title="Latest Listings" />
