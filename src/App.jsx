@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import Listing from "./pages/Listing";
@@ -10,6 +9,11 @@ import ContactUs from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+// import RequireAuth from "./middlewares/RequireAuth";
+import { ToastContainer } from "react-toastify";
+import UnAuthorized from "./pages/UnAuthorized";
+import ResetPassword from "./pages/ResetPassword";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
@@ -18,15 +22,23 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="listing" element={<Listing />} />
-          <Route path="property" element={<Property />} />
+          <Route path="property/:id" element={<Property />} />
           <Route path="gallery" element={<Gallery />} />
-          <Route path="dashboard" element={<Dashboard />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
+          <Route path="reset-password/:token" element={<ResetPassword />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="unAuthorized" element={<UnAuthorized />} />
           <Route path="register" element={<Register />} />
+          <Route path="dashboard" element={<Dashboard />} />
+
+          {/* <Route element={<RequireAuth allowedRoles={["client, agent"]} />}>
+            <Route path="dashboard" element={<Dashboard />} />
+          </Route> */}
         </Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

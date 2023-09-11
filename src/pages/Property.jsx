@@ -15,8 +15,34 @@ import {
   FaPhone,
   FaTwitter,
 } from "react-icons/fa";
+import { useState } from "react";
+import useAxiosFetch from "../hooks/useAxiosFetch";
+import { server } from "../constants/server";
+import { useEffect } from "react";
+import { notify } from "../components/Notify";
 
 const Property = () => {
+  const [properties, setProperties] = useState(null);
+
+  const { data, loading, error } = useAxiosFetch(`${server}property`);
+
+  useEffect(() => {
+    if (error) {
+      if (error?.response?.status === 500) {
+        notify(error.response.data?.error, "error");
+      }
+      notify(error.response?.data?.errorMessage, "error");
+
+      console.log(error.response.status, "error");
+    }
+    if (data) {
+      // notify("Profile update successful.", "success");
+
+      setProperties(data.data);
+      console.log(data.data, "data");
+    }
+  }, [data, error]);
+
   return (
     <section className="h-auto">
       <PageHeader title="property" />

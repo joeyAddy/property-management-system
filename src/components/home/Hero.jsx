@@ -20,7 +20,7 @@ const Hero = () => {
               Your Real Estate Solution
             </h4>
             <h1 className="text-5xl md:text-4xl xl:text-7xl font-semibold tracking-tighter mb-6">
-              The best Apartments <br /> you'd ever find
+              The best Apartments <br /> you&apos;d ever find
             </h1>
             <h4
               style={{ fontFamily: "'Lato', sans-serif;" }}

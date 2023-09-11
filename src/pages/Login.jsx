@@ -1,13 +1,67 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import useAxiosPost from "../hooks/useAxiosPost";
+import { server } from "../constants/server";
+import { useEffect } from "react";
+import { notify } from "../components/Notify";
+import useAuthContext from "../hooks/useAuthContext";
+import { getCookie, setCookie } from "../utils/cookie";
 
 const Login = () => {
+  const { data, loading, error, postData } = useAxiosPost();
+
+  const { setUser, cookieUser } = useAuthContext();
+
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!form) return;
+    postData(`${server}user/login`, form);
+  };
+
+  useEffect(() => {
+    if (error) {
+      if (error?.response.status === 500) {
+        notify(error.response.data.error?.message, "error");
+      }
+      notify(error.response.data.errorMessage, "error");
+
+      console.log(error, "error");
+    }
+    if (data) {
+      notify(
+        `Welcome back, ${String(data.data.user.fullName).toUpperCase()}`,
+        "success"
+      );
+      setCookie("user", JSON.stringify(data.data.user), 1);
+      setCookie("token", JSON.stringify(data.token), 1);
+      setUser(JSON.parse(getCookie("user")));
+      navigate("/dashboard");
+
+      console.log(data.data, "data");
+    }
+  }, [data, error, setUser]);
+
+  useEffect(() => {
+    if (cookieUser == undefined) return;
+    console.log(cookieUser, "cookie");
+    navigate("/dashboard");
+  }, [cookieUser]);
   return (
     <section className="h-auto my-16 flex flex-col items-center justify-center md:mx-36 shadow-sm">
       <div className="h-full px-6 shadow-lg py-7">
-        <p className="text-gray-600 font-bold text-3xl text-center ">
-          Login
-        </p>
+        <p className="text-gray-600 font-bold text-3xl text-center ">Login</p>
         <p className="text-gray-600 font-bold text-base text-center py-4">
           Dont have an account?{" "}
           <Link className="text-blue-600 font-extrabold" to="/register">
@@ -19,15 +73,23 @@ const Login = () => {
             <form>
               <div className="p-4 border-2 rounded mb-6">
                 <input
-                  className="focus:outline-none"
+                  className="outline-none w-full"
                   type="email"
+                  name="email"
+                  value={form.email}
+                  required
+                  onChange={handleFormChange}
                   placeholder="Email"
                 />
               </div>
               <div className="p-4 border-2 rounded mb-6">
                 <input
-                  className="focus:outline-none"
+                  className="outline-none w-full"
                   type="password"
+                  name="password"
+                  value={form.password}
+                  onChange={handleFormChange}
+                  required
                   placeholder="Password"
                 />
               </div>
@@ -38,7 +100,7 @@ const Login = () => {
                     type="checkbox"
                     value=""
                     id="exampleCheck3"
-                    checked
+                    defaultChecked
                   />
                   <label
                     className="inline-block pl-[0.15rem] hover:cursor-pointer"
@@ -49,7 +111,7 @@ const Login = () => {
                 </div>
 
                 <Link
-                  to="#!"
+                  to="/forgot-password"
                   className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
                 >
                   Forgot password?
@@ -57,12 +119,13 @@ const Login = () => {
               </div>
 
               <button
+                onClick={handleSubmit}
                 type="submit"
-                className=" bg-blue-600 inline-block w-full rounded bg-primary px-7 py-4 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                className=" bg-blue-600 inline-block w-full rounded px-7 py-4 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 data-te-ripple-init
                 data-te-ripple-color="light"
               >
-                Sign in
+                {loading ? "Login you in..." : "Sign In"}
               </button>
 
               <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">

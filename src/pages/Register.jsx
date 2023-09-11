@@ -1,7 +1,52 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { server } from "../constants/server";
+import useAxiosPost from "../hooks/useAxiosPost";
+import { useEffect } from "react";
+import { notify } from "../components/Notify";
 
 const Register = () => {
+  const { data, loading, error, postData } = useAxiosPost();
+
+  // const [user, setUser] = useState();
+
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    password: "",
+    passwordConfirm: "",
+  });
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!form) return;
+    postData(`${server}user/signup`, form);
+  };
+
+  useEffect(() => {
+    if (error) {
+      if (error?.response.status === 500) {
+        notify(error.response.data.error?.message, "error");
+      }
+      notify(error.response.data.errorMessage, "error");
+
+      console.log(error.response, "error");
+    }
+    if (data) {
+      notify(
+        "You have succesfully created your account. Logging you in",
+        "success"
+      );
+      console.log(data, "data");
+    }
+  }, [data, error]);
+
   return (
     <section className="h-auto my-16 flex flex-col items-center justify-center md:mx-36 shadow-sm">
       <div className="h-full px-6 shadow-lg py-7">
@@ -19,40 +64,68 @@ const Register = () => {
             <form>
               <div className="p-4 border-2 rounded mb-6">
                 <input
-                  className="focus:outline-none"
+                  className="w-full outline-none"
                   type="text"
-                  placeholder="Full name"
+                  name="fullName"
+                  value={form.fullName}
+                  required
+                  onChange={handleFormChange}
+                  placeholder="Full Name"
                 />
               </div>
               <div className="p-4 border-2 rounded mb-6">
                 <input
-                  className="focus:outline-none"
+                  className="w-full outline-none"
                   type="email"
+                  name="email"
+                  value={form.email}
+                  required
+                  onChange={handleFormChange}
                   placeholder="Email"
                 />
               </div>
               <div className="p-4 border-2 rounded mb-6">
                 <input
-                  className="focus:outline-none"
+                  className="w-full outline-none"
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  required
+                  onChange={handleFormChange}
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div className="p-4 border-2 rounded mb-6">
+                <input
+                  className="w-full outline-none"
                   type="password"
+                  name="password"
+                  value={form.password}
+                  required
+                  onChange={handleFormChange}
                   placeholder="Password"
                 />
               </div>
               <div className="p-4 border-2 rounded mb-6">
                 <input
-                  className="focus:outline-none"
+                  className="w-full outline-none"
                   type="password"
+                  name="passwordConfirm"
+                  value={form.passwordConfirm}
+                  required
+                  onChange={handleFormChange}
                   placeholder="Confirm Password"
                 />
               </div>
 
               <button
                 type="submit"
-                className=" bg-blue-600 inline-block w-full rounded bg-primary px-7 py-4 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                onClick={handleSubmit}
+                className=" bg-blue-600 inline-block w-full rounded px-7 py-4 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 data-te-ripple-init
                 data-te-ripple-color="light"
               >
-                Sign Up
+                {loading ? "Registering..." : "Sign Up"}
               </button>
 
               <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">

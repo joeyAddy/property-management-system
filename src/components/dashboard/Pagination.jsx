@@ -3,8 +3,10 @@ import { useState } from "react";
 import PropertyRow from "./PropertyRow";
 import { useRef } from "react";
 
-const Table = ({ data, itemsPerPage }) => {
+const Table = ({ data, itemsPerPage, refetch }) => {
   const [currentPage, setCurrentPage] = useState(1);
+
+  console.log(data, "from row");
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -53,7 +55,11 @@ const Table = ({ data, itemsPerPage }) => {
               title={item.title}
               price={item.price}
               address={item.address}
-              image={item.image}
+              id={item._id}
+              favorite={item?.favorite}
+              date={String(item.createdAt).split("T")[0]}
+              image={item.images[0]}
+              refetch={refetch}
             />
           ))}
         </tbody>
