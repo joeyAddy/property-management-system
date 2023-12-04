@@ -38,6 +38,8 @@ const PopularListing = () => {
       <div className="grid lg:grid-cols-3 gap-8">
         {loading ? (
           <p className="font-bold text-center my-5">Fetching properties...</p>
+        ) : error ? (
+          <p className="font-bold text-center my-5">Something went wrong</p>
         ) : properties !== null ? (
           properties.map(
             (

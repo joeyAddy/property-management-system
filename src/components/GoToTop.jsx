@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FaChevronUp } from "react-icons/fa";
 
 const GoTop = ({ showGoTop, scrollUp }) => {

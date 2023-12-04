@@ -41,10 +41,18 @@ const Login = () => {
     }
     if (data) {
       notify(
-        `Welcome back, ${String(data.data.user.fullName).toUpperCase()}`,
+        `Welcome back, ${String(
+          data.data.user._doc != undefined
+            ? data.data.user._doc.fullName
+            : data.data.user.fullName
+        ).toUpperCase()}`,
         "success"
       );
-      setCookie("user", JSON.stringify(data.data.user), 1);
+      if (data.data.user._doc != undefined) {
+        setCookie("user", JSON.stringify(data.data.user._doc), 1);
+      } else {
+        setCookie("user", JSON.stringify(data.data.user), 1);
+      }
       setCookie("token", JSON.stringify(data.token), 1);
       setUser(JSON.parse(getCookie("user")));
       navigate("/dashboard");

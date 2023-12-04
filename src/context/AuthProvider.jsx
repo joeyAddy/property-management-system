@@ -20,7 +20,10 @@ export const AuthProvider = ({ children }) => {
     }
     return parsedJSON;
   };
-  const cookieUser = parseJSON(foundUser);
+  const cookieUser =
+    parseJSON(foundUser)?._doc === undefined
+      ? parseJSON(foundUser)
+      : parseJSON(foundUser)._doc;
   console.log(cookieUser, "Cookie for user");
 
   return (

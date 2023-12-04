@@ -46,7 +46,7 @@ const Dashboard = () => {
 
             <div className="text-center text-white absolute top-3">
               <p className="font-bold text-2xl capitalize">
-                {cookieUser?.title + " " + cookieUser?.fullName}
+                {cookieUser?.title && cookieUser?.title} {cookieUser?.fullName}
               </p>
               <p className="font-normal text-xl">
                 {cookieUser?.role === "agent"
@@ -115,19 +115,21 @@ const Dashboard = () => {
                 <FaHome />
                 <a>My Properties</a>
               </li>
-              <li
-                onClick={() => {
-                  setSection("favorite properties");
-                }}
-                className={`flex flex-row space-x-3 cursor-pointer text-sm hover:bg-gray-300 hover:text-blue-400 items-center py-3 px-4 ${
-                  section === "favorite properties"
-                    ? "text-blue-400 bg-gray-300 font-semibold"
-                    : "text-gray-400"
-                }`}
-              >
-                <FaHeart />
-                <a>Favorite Properties</a>
-              </li>
+              {cookieUser.role === "agent" && (
+                <li
+                  onClick={() => {
+                    setSection("favorite properties");
+                  }}
+                  className={`flex flex-row space-x-3 cursor-pointer text-sm hover:bg-gray-300 hover:text-blue-400 items-center py-3 px-4 ${
+                    section === "favorite properties"
+                      ? "text-blue-400 bg-gray-300 font-semibold"
+                      : "text-gray-400"
+                  }`}
+                >
+                  <FaHeart />
+                  <a>Favorite Properties</a>
+                </li>
+              )}
               <li
                 onClick={() => {
                   setSection("new property");
@@ -158,6 +160,7 @@ const Dashboard = () => {
                 onClick={() => {
                   deleteCookie("user");
                   setUser(null);
+                  navigate("/login");
                 }}
                 className={`flex flex-row space-x-3 cursor-pointer text-sm hover:bg-gray-300 hover:text-blue-400 active:text-blue-400 items-center py-3 px-4 ${
                   section === "logout"

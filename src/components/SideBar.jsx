@@ -59,25 +59,7 @@ const SideBar = ({ setOpenCanvas, openCanvas, urlPath }) => {
             {"> "} Listing
           </Link>
         </li>
-        <li
-          onClick={() => {
-            setOpenCanvas(false);
-          }}
-          className="lg:mb-0"
-          data-te-nav-item-ref
-        >
-          <Link
-            className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:-translate-y-1 hover:focus  ${
-              urlPath === "property" ? "translate-x-3" : ""
-            }`}
-            to="/property"
-            data-te-nav-link-ref
-            data-te-ripple-init
-            data-te-ripple-color="light"
-          >
-            {"> "} Property
-          </Link>
-        </li>
+
         <li
           onClick={() => {
             setOpenCanvas(false);

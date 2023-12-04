@@ -11,6 +11,8 @@ import {
 import { BiLockAlt, BiPen } from "react-icons/bi";
 import { Link, useLocation } from "react-router-dom";
 import SideBar from "./SideBar";
+import useAuthContext from "../hooks/useAuthContext";
+import { MdDashboard } from "react-icons/md";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -18,6 +20,8 @@ const Header = () => {
   const [urlPath, setUrlPath] = useState("");
 
   const [openCanvas, setOpenCanvas] = useState(false);
+
+  const { user } = useAuthContext();
 
   useEffect(() => {
     setUrlPath(pathname.replace("/", ""));
@@ -42,39 +46,49 @@ const Header = () => {
                 <p>Area 34, Mahuta, Kaduna</p>
               </div>
             </div>
-            <div className="flex items-center justify-center text-sm h-10">
-              <div className="space-x-3 flex mr-2">
-                <Link to="/login" className="flex items-center space-x-1">
-                  <BiLockAlt />
-                  <span>Login</span>
-                </Link>
-                <span>|</span>
-                <Link to="/register" className="flex items-center space-x-1">
-                  <BiPen />
-                  <span>Register</span>
+            {user !== null ? (
+              <div className="flex items-center justify-center text-sm h-10">
+                {" "}
+                <Link to="/dashboard" className="flex items-center space-x-1">
+                  <MdDashboard />
+                  <span>My Dashboard</span>
                 </Link>
               </div>
-              <div className="flex h-full">
-                <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
-                  <FaFacebookF />
+            ) : (
+              <div className="flex items-center justify-center text-sm h-10">
+                <div className="space-x-3 flex mr-2">
+                  <Link to="/login" className="flex items-center space-x-1">
+                    <BiLockAlt />
+                    <span>Login</span>
+                  </Link>
+                  <span>|</span>
+                  <Link to="/register" className="flex items-center space-x-1">
+                    <BiPen />
+                    <span>Register</span>
+                  </Link>
+                </div>
+                <div className="flex h-full">
+                  <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
+                    <FaFacebookF />
+                  </div>
+                </div>
+                <div className="flex h-full">
+                  <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
+                    <FaTwitter />
+                  </div>
+                </div>
+                <div className="flex h-full">
+                  <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
+                    <FaInstagram />
+                  </div>
+                </div>
+                <div className="flex h-full">
+                  <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
+                    <FaLinkedinIn />
+                  </div>
                 </div>
               </div>
-              <div className="flex h-full">
-                <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
-                  <FaTwitter />
-                </div>
-              </div>
-              <div className="flex h-full">
-                <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
-                  <FaInstagram />
-                </div>
-              </div>
-              <div className="flex h-full">
-                <div className="border-r border-gray-400 px-3 h-full flex items-center cursor-pointer hover:bg-blue-400">
-                  <FaLinkedinIn />
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </section>
       </div>
@@ -163,21 +177,7 @@ const Header = () => {
                   Listing
                 </Link>
               </li>
-              <li className="mb-4 lg:mb-0" data-te-nav-item-ref>
-                <Link
-                  className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
-                    urlPath === "property"
-                      ? "bg-blue-600 rounded-md text-white"
-                      : ""
-                  }`}
-                  to="/property"
-                  data-te-nav-link-ref
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
-                >
-                  Property
-                </Link>
-              </li>
+
               <li className="mb-2 lg:mb-0" data-te-nav-item-ref>
                 <Link
                   className={`block transition duration-150 ease-in-out lg:p-3 text-sm hover:text-blue-400 hover:focus:text-white  ${
